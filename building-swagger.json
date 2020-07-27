@@ -12,7 +12,7 @@
             "url": "http://localhost"
         }
     },
-    "host": "localhost:3000",
+    "host": "445",
     "basePath": "/api",
     "tags": [],
     "schemes": [
