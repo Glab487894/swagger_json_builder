@@ -78,34 +78,6 @@
         "firstName": {
           "type": "string",
           "example": "Artem"
-        },
-        "lastName": {
-          "type": "string",
-          "example": "Strizhkov"
-        },
-        "language": {
-          "type": "string",
-          "example": "EN"
-        },
-        "phone": {
-          "type": "string",
-          "example": "0667777777"
-        },
-        "email": {
-          "type": "string",
-          "example": "test@gmail.com"
-        },
-        "status": {
-          "type": "string",
-          "example": "active"
-        },
-        "network": {
-          "type": "string",
-          "example": "telegram"
-        },
-        "networkId": {
-          "type": "string",
-          "example": "3644274532256358"
         }
       },
       "xml": {
