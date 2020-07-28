@@ -1,8 +1,4 @@
 {
-    "tags": [],
-    "schemes": [
-        "http"
-    ],
     "paths": {
         "/main/route": {
             "post": {

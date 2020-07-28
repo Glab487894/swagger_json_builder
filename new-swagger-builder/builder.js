@@ -32,47 +32,47 @@ const builderСomunicator = function (buildingParams) {
         // },
         // "host": "localhost:3000",
         // "basePath": "/api",
-        "tags": [
-
-        ],
-        "schemes": [
-            "http"
-        ],
-        "paths": {
-            "/main/route": {
-                "post": {
-                    "tags": [
-                        "CRUD USER"
-                    ],
-                    "summary": "Create user",
-                    "description": "Create user",
-                    "operationId": "createUser",
-                    "consumes": [
-                        "application/json"
-                    ],
-                    "produces": [
-                        "application/json",
-                        "application/xml"
-                    ],
-                    "parameters": [
-                        {
-                            "in": "body",
-                            "name": "body",
-                            "description": "Created user object",
-                            "required": true,
-                            "schema": {
-                                "$ref": "#/definitions/mainRoute"
-                            }
-                        }
-                    ],
-                    "responses": {
-                        "default": {
-                            "description": "successful operation"
-                        }
-                    }
-                }
-            }
-        },
+        // "tags": [
+        //
+        // ],
+        // "schemes": [
+        //     "http"
+        // ],
+        // "paths": {
+        //     "/main/route": {
+        //         "post": {
+        //             "tags": [
+        //                 "CRUD USER"
+        //             ],
+        //             "summary": "Create user",
+        //             "description": "Create user",
+        //             "operationId": "createUser",
+        //             "consumes": [
+        //                 "application/json"
+        //             ],
+        //             "produces": [
+        //                 "application/json",
+        //                 "application/xml"
+        //             ],
+        //             "parameters": [
+        //                 {
+        //                     "in": "body",
+        //                     "name": "body",
+        //                     "description": "Created user object",
+        //                     "required": true,
+        //                     "schema": {
+        //                         "$ref": "#/definitions/mainRoute"
+        //                     }
+        //                 }
+        //             ],
+        //             "responses": {
+        //                 "default": {
+        //                     "description": "successful operation"
+        //                 }
+        //             }
+        //         }
+        //     }
+        // },
         "securityDefinitions": {
             "api_key": {
                 "type": "apiKey",
@@ -122,11 +122,50 @@ const builderСomunicator = function (buildingParams) {
         }
     };
 
+    const paths = {
+        "/main/route": {
+            "post": {
+                "tags": [
+                    "CRUD USER"
+                ],
+                    "summary": "Create user",
+                    "description": "Create user",
+                    "operationId": "createUser",
+                    "consumes": [
+                    "application/json"
+                ],
+                    "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                    "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Created user object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/mainRoute"
+                        }
+                    }
+                ],
+                    "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        }
+    };
+
     const detailSwagger = {};
     detailSwagger["swagger"] = "2.0";
     detailSwagger["info"] = info;
     detailSwagger["host"] = buildingParams.url || "localhost:3000";
     detailSwagger["basePath"] = "/api";
+    detailSwagger["tags"] = [];
+    detailSwagger["schemes"] = ["http"];
+    detailSwagger["paths"] = paths;
 
     console.log(777, detailSwagger);
 
